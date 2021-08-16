@@ -39,32 +39,63 @@
       <div class="row">
         <div class="col-md-6 offset-md-6">
           <div class="rounded shadow p-5 bg-white opacity-85">
+            <h1>Welcome to TravelX</h1>
             <!-- Journey To Mars -->
             <div>
               <label for="mars" class="pt-3">Journey To Mars 🌏👨‍✈️</label>
-              <input type="number" value="0" class="form-control mt-2" />
+              <input
+                value="0"
+                id="mars-quantity"
+                type="number"
+                class="form-control mt-2"
+              />
               <div class="d-flex justify-content-between align-items-center">
                 <div>
-                  <div class="btn btn-primary mt-2">+</div>
-                  <div class="btn btn-primary mt-2">-</div>
+                  <div
+                    onclick="handleQuantity('mars','plus')"
+                    class="btn btn-primary mt-2"
+                  >
+                    +
+                  </div>
+                  <div
+                    class="btn btn-primary mt-2"
+                    onclick="handleQuantity('mars','minus')"
+                  >
+                    -
+                  </div>
                 </div>
-                <div>Cost: $0</div>
+                <div>Cost: $<span id="mars-total">0</span></div>
               </div>
             </div>
             <!-- Journey To Moon -->
             <div>
               <label for="moon" class="pt-3">Journey To Moon 🌒</label>
-              <input type="number" value="0" class="form-control mt-2" />
+              <input
+                value="0"
+                type="number"
+                id="moon-quantity"
+                class="form-control mt-2"
+              />
               <div class="d-flex justify-content-between align-items-center">
                 <div>
-                  <div class="btn btn-primary mt-2">+</div>
-                  <div class="btn btn-primary mt-2">-</div>
+                  <div
+                    onclick="handleQuantity('moon','plus')"
+                    class="btn btn-primary mt-2"
+                  >
+                    +
+                  </div>
+                  <div
+                    class="btn btn-primary mt-2"
+                    onclick="handleQuantity('moon', 'minus')"
+                  >
+                    -
+                  </div>
                 </div>
-                <div>Cost: $0</div>
+                <div>Cost: $ <span id="moon-total">0</span></div>
               </div>
             </div>
             <hr />
-            <div class="text-end">Total Cost: $0</div>
+            <div class="text-end">Total Cost: $ <span id="total">0</span></div>
           </div>
         </div>
       </div>
